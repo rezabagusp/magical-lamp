@@ -63,7 +63,6 @@ const HomeScreen = () => {
     .then((response) => response.json())
     .then((data: UserFeed) => {
       setData(data.results);
-      console.log(data);
       setPage(data.info.page);
       setLoading(false);
     }).catch(() => {
