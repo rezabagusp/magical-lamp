@@ -1,5 +1,5 @@
 {
-  "name": "shkola",
+  "name": "magical-lamp",
   "private": true,
   "scripts": {
     "dev": "next dev",
