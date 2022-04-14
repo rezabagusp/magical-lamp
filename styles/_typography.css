@@ -1,0 +1,20 @@
+body {
+  @apply text-neutral-100;
+}
+main {
+ @apply max-w-5xl mx-auto min-h-screen;
+}
+a {
+  text-decoration: none;
+  @apply text-primary-pressed !important;
+}
+a:hover {
+  text-decoration: underline;
+}
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+input::placeholder,
+textarea::placeholder {
+  @apply text-neutral-80;
+}

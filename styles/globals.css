@@ -1,0 +1,10 @@
+@tailwind base;
+/* our own custom base styles here */
+@import "./_typography.css";
+@tailwind components;
+
+@tailwind utilities;
+
+/* our own custom utilities */
+@import "./_utility.css";
+@import "./_nprogess.css";

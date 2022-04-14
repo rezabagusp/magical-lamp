@@ -1,0 +1,24 @@
+.icon {
+  fill: currentColor;
+  display: block;
+}
+
+.icon--neutral10 {
+  @apply text-neutral-10;
+}
+
+.icon--neutral60 {
+  @apply text-neutral-60;
+} 
+
+.icon--neutral100 {
+  @apply text-neutral-100;
+}
+
+.icon--primaryMain {
+  @apply text-primary-main;
+}
+
+.icon--primaryHover {
+  @apply text-primary-hover;
+}

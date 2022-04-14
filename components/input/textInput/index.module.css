@@ -1,0 +1,30 @@
+.textInput {
+  @apply
+    relative
+    border
+    border-solid
+    border-neutral-50
+    rounded-lg
+    text-neutral-100;
+}
+
+.textInput input {
+  @apply py-3 px-4 rounded-lg;
+}
+.is-error {
+  @apply
+    border-2
+    border-error;
+}
+
+.textInput-disabledOverlay {
+  @apply
+    absolute
+    top-0
+    left-0
+    w-full
+    h-full
+    opacity-30
+    rounded-lg
+    bg-neutral-60;
+}

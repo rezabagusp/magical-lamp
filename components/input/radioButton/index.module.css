@@ -1,0 +1,59 @@
+.radioButton-wrapper {
+  @apply
+    text-sm
+    leading-4
+    block
+    relative
+    pl-6
+    cursor-pointer
+    select-none;
+}
+
+/* Hide the browser default radio button */
+.radioButton-wrapper input {
+  @apply
+    absolute
+    opacity-0
+    cursor-pointer;
+}
+
+/* Create custom radio button */
+.radioButton-checkmark {
+  @apply
+    absolute
+    top-0
+    left-0
+    h-4
+    w-4
+    bg-transparent
+    border
+    border-solid
+    border-primary-pressed
+    rounded-full;
+}
+
+.radioButton-wrapper > input:checked ~ .radioButton-checkmark {
+  @apply border-2;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radioButton-checkmark:after {
+  content: '';
+  @apply
+    absolute
+    top-0
+    left-0
+    right-0
+    bottom-0
+    m-auto
+    w-2
+    h-2
+    hidden
+  bg-primary-pressed
+    rounded-full;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radioButton-wrapper > input:checked ~ .radioButton-checkmark:after {
+  @apply block;
+}

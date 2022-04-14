@@ -1,0 +1,25 @@
+.optionList {
+  @apply
+    max-h-64
+    overflow-auto
+    w-full
+    z-10
+    bg-neutral-10
+    rounded;
+}
+
+.optionList ul li {
+  @apply
+    border-b
+    border-neutral-30
+}
+
+.optionList ul li:last-child {
+  @apply
+    border-none;
+}
+
+.optionList ul li:first-child {
+  @apply
+    border-t;
+}

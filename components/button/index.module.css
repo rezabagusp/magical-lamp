@@ -1,0 +1,38 @@
+.button {
+  @apply cursor-pointer outline-none overflow-hidden relative;
+  @apply flex items-center justify-center;
+  @apply font-semibold text-sm;
+  @apply w-full;
+  @apply uppercase;
+  padding: 8px 16px;
+  position: relative;
+}
+
+.button-loadingOverlay {
+  @apply absolute top-0 left-0;
+  @apply w-full h-full bg-neutral-80 bg-opacity-40;
+}
+
+.button,
+.button-loadingOverlay {
+  border-radius: 30px;
+}
+
+.button--primary {
+  @apply text-neutral-10 border-none bg-primary-main;
+}
+
+.button--primaryOutline {
+  @apply text-primary-main border border-primary-main bg-transparent;
+}
+
+.button--sm {
+  padding: 4px 8px;
+  @apply text-sm;
+}
+
+.button--disabled {
+  cursor: not-allowed;
+  @apply bg-neutral-40 text-neutral-60;
+}
+

@@ -1,0 +1,51 @@
+.checkbox {
+  @apply relative border border-solid;
+  @apply w-[16px] h-[16px] rounded-sm;
+  @apply select-none text-sm leading-4 border-primary-main bg-transparent;
+}
+
+.checkbox.is-checked {
+  @apply border border-solid border-primary-main bg-primary-main;
+}
+
+.checkbox-input {
+  @apply
+    absolute
+    opacity-0
+    h-full
+    w-full
+    cursor-pointer;
+}
+
+.checkbox-checkMark {
+  @apply
+    absolute
+    left-0
+    top-0
+    pointer-events-none
+    w-full
+    h-full; 
+}
+
+.checkbox-checkMark::after {
+  content: '';
+  @apply
+    hidden
+    absolute
+    top-0
+    left-1
+    right-0
+    border-solid
+    border-neutral-10
+    bottom-0;
+  width: 6px;
+  height: 11px;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox-input:checked + .checkbox-checkMark::after {
+  @apply block;
+}
