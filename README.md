@@ -23,8 +23,8 @@ you can find information about the installation on [official git-scm website](ht
 Once Node.js is installed in your computer, do these following commands:
 
 ```
-git clone https://github.com/Nusantara-Muda/shkola.git
-cd shkola
+git clone https://github.com/rezabagusp/magical-lamp.git
+cd magical-lamp
 ```
 
 Get our environment variables. Get the .env file from your colleagues.
