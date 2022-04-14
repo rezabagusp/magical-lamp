@@ -12,6 +12,7 @@ import { Column } from 'react-table';
 import Button from '../components/button';
 import { Label, SelectOption, TextInput } from '../components/input';
 import Table from '../components/table';
+import { API_URL } from '../constants';
 import type { Option } from '../types/misc';
 import type { UserFeed, User } from '../types/user';
 
@@ -59,7 +60,7 @@ const HomeScreen = () => {
 
   const handleFetchhData = useCallback((params: Filter) => {
     setLoading(true);
-    fetch(`https://randomuser.me/api?${new URLSearchParams(params as any)}`)
+    fetch(`${API_URL}?${new URLSearchParams(params as any)}`)
     .then((response) => response.json())
     .then((data: UserFeed) => {
       setData(data.results);
