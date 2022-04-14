@@ -93,17 +93,6 @@ const SelectOption = ({
       {renderSelectInputContent()}
       <div className="absolute top-1/2 -translate-y-1/2 right-3">
         <div className="flex items-center">
-          {
-            value && (
-              <Icon
-                icon="close"
-                size={16}
-                color="neutral100"
-                onClick={() => onChange(null)}
-                cursorPointer
-              />
-            )
-          }
           <Icon
             icon="chevron"
             className={cn(
@@ -124,15 +113,13 @@ const SelectOption = ({
       }
       {
         showOptions && (
-          <div className="mt-1">
-            <OptionList
-              className="absolute left-0 border"
-              value={value}
-              options={options}
-              onChange={handleSelect}
-              loading={loading}
-            />
-          </div>
+          <OptionList
+            className="absolute left-0 border"
+            value={value}
+            options={options}
+            onChange={handleSelect}
+            loading={loading}
+          />
         )
       }
     </div>
