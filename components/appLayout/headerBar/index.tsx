@@ -17,7 +17,7 @@ const HeaderBar = ({
     )}
   >
     <LinkWrapper className="hover:no-underline text-primary-pressed font-bold text-2xl block" href="/">
-      Niconime.Tv
+      Magical Lamp
     </LinkWrapper>
   </div>
 );

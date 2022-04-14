@@ -2,14 +2,14 @@ import React from 'react';
 import Head from 'next/head';
 import { APP_BASE_URL } from '../../constants';
 
-const DEFAULT_TITLE = 'Niconime!';
-const DEFAULT_DESCRIPTION = 'One stop leading anime aggrator for everyone!';
+const DEFAULT_TITLE = 'Magical Lamp!';
+const DEFAULT_DESCRIPTION = 'One stop service for stock investment where magic happens!';
 
 const DEFAULT_IMAGE_WIDTH = 612;
 const DEFAULT_IMAGE_HEIGHT = 396;
-const DEFAULT_IMAGE_URL = `${APP_BASE_URL}/images/niconime-logo-banner.jpg`;
+const DEFAULT_IMAGE_URL = `${APP_BASE_URL}/images/magical-lamp-logo.jpg`;
 const DEFAULT_URL = APP_BASE_URL;
-const DEFAULT_AUTHOR = 'Niconime  Editorial';
+const DEFAULT_AUTHOR = 'Magical Lamp Editorial';
 const DEFAULT_OG_TYPE = 'website';
 
 interface Props {
@@ -63,7 +63,7 @@ const SEO = ({
       <meta property="twitter:description" content={metaDesc} />
       <meta property="twitter:url" content={metaURL} />
       <meta property="twitter:card" content="summary_large_image" />
-      <title>{`${metaTitle} | Niconime`}</title>
+      <title>{`${metaTitle} | Magical Lamp`}</title>
     </Head>
   );
 };
