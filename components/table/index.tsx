@@ -20,16 +20,19 @@ const Pagination = ({
       text: 'First',
       onClick: () => onChangePage(1),
       isDisable: page === 1,
+      width: 'auto',
     },
     {
       text: 'Prev',
       onClick: () => onChangePage(page - 1),
       isDisable: page === 1,
+      width: 'auto',
     },
     {
       text: 'Next',
       onClick: () => onChangePage(page + 1),
       isDisable: false,
+      width: 'auto',
     },
   ];
 
@@ -115,6 +118,7 @@ const Table = ({
       <Pagination page={page} onChangePage={onChangePage} />
       <table
         {...getTableProps()}
+        className="w-full"
       >
         <thead>
           {headerGroups.map((headerGroup) => {
