@@ -36,7 +36,7 @@ Person {name: 25, age: 'Reza Bagus Permana'}
 ```
 
 ### Answer 2:
-New class syntax is syntax that is part of the ES6(ES2015) features. It allows us to write the object in more *class-based* programming way. We should noted here that Javascript is not a *class-based* programming language (it's *prototype-based*). so that the syntax is just a sugar syntax that mimic the object declaration like the *class-based* one.
+New class syntax is syntax that is part of the ES6(ES2015) features. It allows us to write the object in more *class-based* programming way. We should noted here that Javascript is not a *class-based* programming language (it's *prototype-based*). So that it just a syntax that mimic the object declaration like the *class-based* one.
 
 *Class method* or we may call it a static method is a method that is part of the class. This method can be called directly without needing to create an instance class.
 
@@ -61,6 +61,13 @@ Example:
     }
   }
 
+  // without a make an instance, we can directly called it the static method like this
+
+  Person.getNetworkStatus();
+  /*
+    You are online
+  */
+
 ```
 
 ### Answer 3:
@@ -77,7 +84,7 @@ Suppose we already have class `Person`. Then, we want to utilize that class and 
     }
   }
 
-  // inherit tha `Person` class to `Student` class
+  // inherit that `Person` class to `Student` class
   class Student extends Person {
     constructor(age, name, studentId) {
       super(age, name);
@@ -94,7 +101,6 @@ Suppose we already have class `Person`. Then, we want to utilize that class and 
   const rezaStudent = new Student('Reza Bagus Permana', 25, 'G14140023');
   rezaStudent.whoAmI();
   /*
-    // display console
     Hallo, my name is Reza Bagus Permana. i'm 25 years old
     My student ID is G64140023
   */
@@ -102,19 +108,19 @@ Suppose we already have class `Person`. Then, we want to utilize that class and 
 As we can see, since `Student` inherit the  `Person` class. The instance of the `Student` class also get the properties and methods that define in `Person` class.
 
 ### Answer 4:
-First of all. We need to make sure that the environment of our Application is support ES6. if not, of course we should setup the environment first.
+First of all. We need to make sure that the environment of our Application is support ES6 or not. If not, of course we should setup the environment first.
 
 Assume our application is support ES6 environment.
-- Firstly, we need to remark which of tha part of the code that could be refactored to ES6. I usually start by the popular ES6 feature like arrow function, spread operator, scope variable like let, const and var.
-- Then, we try change any variables that is define with `var` to `let` (if necessary).
-- Then, we change variable that used only once with `const`,
-- Then, change any function define with `function` to arrow function (define it with function expression instead).
+- Firstly, we need to remark which part of the code that could be refactored to ES6. I usually start by the popular ES6 feature like arrow function, spread operator, and variables (like `let`, `const` and `var`).
+- Then, we try change any variables that is defined with `var` to `let` (if necessary).
+- Then, we change variable that is used only once with `const`,
+- Then, change any function that is defined with `function` to arrow function (define it with function expression instead).
 - Re-run & test.
 - Iterate to other files.
 
 ### Answer 5:
-Actually in React, we usually implement closure and modules when we define our component.
-Let's say we create a file component called ButtonCounter. This file is a representation of the module component we define. This component basically an UI with a counter state.
+Actually in React, we usually implement *closure* and *modules* when we define our component.
+Let's say we create a file component called `ButtonCounter`. This file is a representation of the module component we define. This component basically an UI with a counter state.
 
 ```
 const ButtonCounter = () => {
@@ -132,12 +138,12 @@ const ButtonCounter = () => {
 export default ButtonCounter;
 ```
 
-As we call it a module, it means we encapsulate the scope and control the data that can be access to the outside module.
-We can see that at `ButtonCounter` module, it take the advantage of the closure state (*counter*) define in that component. whenever that component is called, the state is not only available to that module but also it will remain until that component is disposed.
+As we call it a module, means it encapsulate the scope and control the data that can be accessed by the ouside module.
+We can see that at `ButtonCounter` module, it take the advantage of the closure state (*counter*) define in that component. Whenever that component is called, the state is not only available to that module but also it will remain until that component is disposed.
 
 ### Answer 6:
 Black box & Unit test.
-But, i'd say it also depends on the case we face. For many reasons, create test causes a lot of pain (Time consuming). But, we can't deny that it is important. For me, it would be the combination of those two. First, i focus on developing the functionalities and then create the test. I prefer to do the test to the container component since the view component is typically just for a view purpose.
+But, i'd say it also depends on the case we face. For many reasons, create test causes a lot of pain (ex: Time consuming). But, we can't deny that it is important. For me, it would be the combination of those two. First, i focus on developing the functionalities and then create the test. I prefer to do the test at container component since the view component is typically just for a view purpose.
 
 ### Answer 7:
 Nginx. I use it on my saveral project. Honestly i don't really get into depth about the web server. I only know that Nginx is one of the most use and popular web server out there.
@@ -149,12 +155,12 @@ Using CI/CD with combination of *trunk-based* development process. I usually imp
 - When we develop new things (feat, refactor, fix, etc.), we checkout from the  *master* branch, and do the work there.
 - Once finished, we review the code & merge it to master.
 - I usually setup the github hook that listens to any changes on the master branch, if any changes happen then it will cause the action for our CI/CD service to deploy our app on the staging server.
-- For production, i usually trigger it by the tag to cause our CI/CD service to deploy on the production server.  
+- For production, i usually trigger the deployment by `tag`. Whenever i create a `tag`, it will trigger our CI/CD service to deploy on the production server.  
 
 ### Answer 9:
-I have some hints for how good Readme.md should be.
-- What is is about?
-- It should cover How to process (if needed).
+I have some hints for how good Readme.md should be.It should fulfill the following.
+- What it is about?
+- It should cover how to process (if needed).
 - It should cover examples (if needed))
 - It should cover what others or future of us should know.
 
